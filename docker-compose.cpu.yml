@@ -1,0 +1,12 @@
+services:
+  chocolate-api:
+    build:
+      context: .
+      dockerfile: Dockerfile  # usa o Dockerfile padrão com CPU
+    container_name: candy-api-cpu
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    environment:
+      - TRANSFORMERS_CACHE=/app/.cache

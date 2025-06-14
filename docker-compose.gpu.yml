@@ -1,0 +1,19 @@
+services:
+  candy-api:
+    build:
+      context: .
+      dockerfile: Dockerfile.gpu  # usará um Dockerfile com suporte a CUDA
+    container_name: candy-api-gpu
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    environment:
+      - HF_HOME=/app/.cache
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
