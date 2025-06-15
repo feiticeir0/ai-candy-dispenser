@@ -1,10 +1,12 @@
 # 🍬 Candy Machine with Voice Recognition
+This project is a tiny, AI-powered candy dispenser built with the Seeed Studio ESP32S3 Sense and the Xiao Round Display for XIAO.
 
-This project turns a simple touchscreen with a microphone into a **magical candy dispenser**. The machine listens to your voice and decides — with the help of artificial intelligence — if you deserve a chocolate! 😄
+Say the right magic words, and you’ll be rewarded with a cookie. 😄
+If not, the screen politely tells you to try again.
 
 ---
 
-## 🧠 How It Works
+## 📷 How It Works
 
 1. The user presses a button on the screen.
 2. The machine records a phrase for **5 seconds**.
@@ -15,11 +17,10 @@ This project turns a simple touchscreen with a microphone into a **magical candy
    - A candy is automatically **dispensed**
 5. Otherwise, a message is shown asking the user to try again.
 
-This setup creates fun, educational, or promotional interactions with children and adults in events, schools, or public spaces.
 
 ---
 
-## 📂 Project Structure
+🛠️  Project Structure
 
 ```
 .
@@ -34,7 +35,7 @@ This setup creates fun, educational, or promotional interactions with children a
 
 ---
 
-## 🚀 How to Use
+## 📷 How to Use
 ## Server
 ### Deployment with Docker Compose
 ### ⚙️ Requirements
@@ -82,41 +83,8 @@ docker compose -f docker-compose.cpu.yml up --build
 
 ---
 
-## 🎧 Test the API
 
-Assuming you have a `sample.wav` file:
-
-```bash
-curl -X POST --data-binary "@sample.wav" http://localhost:8000/analyze-audio
-```
-
-Expected response:
-
-```json
-{
-  "positivo": true,
-  "text": "Adoro chocolate com amêndoas."
-}
-```
-
----
-
-## 📦 Models Used
-
-- [`openai/whisper-small`](https://github.com/openai/whisper): for audio transcription
-- [`facebook/bart-large-mnli`](https://huggingface.co/facebook/bart-large-mnli): for zero-shot classification
-
----
-
-## 🛠️ Customization
-
-- You can change the classification **labels** (`positive`, `negative`) in `main.py`
-- You can switch Whisper models to `tiny`, `base`, or `large` depending on your hardware
-- You can switch the language used by model
-
----
-
-## 🧪 Testing GPU (CUDA) Support
+## ⚙️ Testing GPU (CUDA) Support
 
 ### ✅ 1. Check NVIDIA drivers
 ```bash
@@ -157,52 +125,30 @@ docker compose up --build    # Build and launch
 docker compose up --build --force-recreate  # Rebuild from scratch
 docker builder prune -af     # Clean build cache
 ```
+---
+
+## 📦 Models Used
+These are the models used. You can change them in `main.py`.
+
+- [`openai/whisper-small`](https://github.com/openai/whisper): for audio transcription
+- [`facebook/bart-large-mnli`](https://huggingface.co/facebook/bart-large-mnli): for zero-shot classification
 
 ---
 
-## 🔌 Uploading Code to the ESP32-S3
+## 🛠️ Customization
 
-To run the Candy Machine on a microcontroller with microphone and LCD (like the ESP32-S3 with 1.47" display), configure your development environment properly.
+- You can change the classification **labels** (`positive`, `negative`) in `main.py`
+- You can switch Whisper models to `tiny`, `base`, or `large` depending on your hardware
+- You can switch the language used by model for the transcription (`pt`, `en`, `es`, etc.)
 
-### ✅ Requirements
 
-- Arduino IDE installed
-- ESP32-S3 board added via **Boards Manager** (Espressif)
-- Official `ESP32` library (v2.0.7 or higher recommended)
+## Client (the candy dispenser)
+### 3D Files
+Go to the [3D](./3D/readme.md) folder for more information.
 
----
+### Arduino Code
+Go to the [Arduino](./Arduino/readme.md) folder for more information.
 
-### ⚙️ Required Settings in Arduino IDE
+### Schematics
+Go to the [Schematics](./Schematics/readme.md) folder for more information.
 
-Set these under **Tools**:
-
-- **Board**: ESP32S3 Dev Module *(or your specific model)*
-- **USB CDC On Boot**: ✔️ Enabled
-- **PSRAM**: ✔️ Enabled ✅ required for audio/transcription
-- **Flash Size**: 16MB
-- **Partition Scheme**: "Default 4MB with spiffs" or larger
-- **Upload Mode**: UART or CDC
-- **Baud Rate**: 115200 or 921600
-
----
-
-### 📤 Uploading the Code
-
-1. Connect ESP32-S3 via USB
-2. Select the correct port in **Tools → Port**
-3. Click on **Upload**
-
-If needed, press the **BOOT** button on the board during upload.
-
----
-
-### 📁 Recommended Libraries
-
-For microphone, touch, and LCD display projects:
-
-- `TFT_eSPI` or `LovyanGFX` (LCD)
-- `ESPAsyncWebServer` (optional)
-- `Audio` or `I2S` (audio capture)
-- `SPIFFS` or `LittleFS` (file storage)
-
----
