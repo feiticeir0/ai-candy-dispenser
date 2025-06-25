@@ -131,7 +131,9 @@ These are the models used. You can change them in `main.py`.
 - You can switch Whisper models to `tiny`, `base`, or `large` depending on your hardware
 - You can switch the language used by model for the transcription (`pt`, `en`, `es`, etc.)
 
-Everything is customizable. Instead of something about candy, it can be about anything. The Xiao records a 5 seconds phrase (customizable, but be aware of memory limitations - it's recorded on memory) and sends it to the server for transcription by whisper. There, you can change the classification labels and make it about anything. 
+### Everything is customizable
+
+Instead of something about candy, it can be about anything. The Xiao records a 5 seconds phrase (customizable, but be aware of memory limitations - it's recorded on memory) and sends it to the server for transcription by whisper. There, you can **change** the classification labels and make it about anything. 
 
 ## Client (the candy dispenser)
 ### 3D Files
