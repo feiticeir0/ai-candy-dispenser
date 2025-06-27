@@ -8,25 +8,34 @@ If not, the screen politely tells you to try again.
 
 ## 📷 How It Works
 1. When starting, the standy screen is shown
+
 ![Standby](./assets/Standby.gif)
+
 2. The user presses the display.
 3. The Xiao starts recording a phrase for **5 seconds**.
+
 ![Recording](./assets/recording.gif)
+
 4. The phrase is sent to a **remote server**:
    - Automatically transcribes the audio using **Whisper** (OpenAI)
    - Classifies the phrase as **positive** or **negative** about chocolate or candy
+
 5. While waitinng for a response from the server
+
 ![Waiting response](./assets/waitingResponse.gif)
+
 4. If the phrase is **positive**:
 
 ![Cookies](./assets/cookies.gif)
    - A candy is automatically **dispensed**
+
 5. Otherwise, a image is shown asking the user to try again.
+
 ![No cookie for you](./assets/noCookie.png)
 
 ---
 
-🛠️  Project Structure
+Project Structure
 
 ```
 .
@@ -117,7 +126,7 @@ docker compose -f docker-compose.gpu.yml up
 After a bit, the container is ready and listening. 
 ![Buiding the image](./assets/dockerCompose_up.png)
 
-### 🛠️ 5. Check if PyTorch uses CUDA
+### 5. Check if PyTorch uses CUDA
 ```bash
 docker exec -it candy-api-gpu python3 -c "import torch; print(torch.cuda.is_available())"
 ```
@@ -149,5 +158,20 @@ Go to the [3D](./3D/readme.md) folder for more information.
 Go to the [Arduino](./Arduino/readme.md) folder for more information.
 
 ### Schematics
-Go to the [Schematics](./Schematics/readme.md) folder for more information.
+Go to the [Schematics](./Schematics/readme.md) folder for more information on how to wire the Xiao to the motor controller. 
+
+## 🔧 TODO
+- [ ] 🎯 Add a sensor to detect motor rotation (make sure a candy exits)
+- [ ] 🧠 Migrate the FastAPI server to work with a Raspbery PI AI Hat+ 
+
+
+## License
+This project is free software: you can redistribute it and/or modify  
+it under the terms of the [GNU General Public License](https://www.gnu.org/licenses/gpl-3.0.en.html)  
+as published by the Free Software Foundation, either version 3 of the License,  
+or (at your option) any later version.
+
+This project is distributed in the hope that it will be useful,  
+but WITHOUT ANY WARRANTY; without even the implied warranty of  
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
 
