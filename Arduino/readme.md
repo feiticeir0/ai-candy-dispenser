@@ -67,7 +67,7 @@ By default, and after some testing for this motor, 1s is enough for a full rotat
 const unsigned long duration = 1000; // how long the motor turns
 ```
 
-## Images
+## :framed_picture: Images
 The displayed images are C flash arrays.
 
 The instructions are inside the TFT_eSPI examples, Flash_PNG sketch. 
