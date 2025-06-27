@@ -7,16 +7,22 @@ If not, the screen politely tells you to try again.
 ---
 
 ## 📷 How It Works
-
-1. The user presses a button on the screen.
-2. The machine records a phrase for **5 seconds**.
-3. The phrase is sent to a **remote server** that:
+1. When starting, the standy screen is shown
+![Standby](./assets/Standby.gif)
+2. The user presses the display.
+3. The Xiao starts recording a phrase for **5 seconds**.
+![Recording](./assets/recording.gif)
+4. The phrase is sent to a **remote server**:
    - Automatically transcribes the audio using **Whisper** (OpenAI)
    - Classifies the phrase as **positive** or **negative** about chocolate or candy
+5. While waitinng for a response from the server
+![Waiting response](./assets/waitingResponse.gif)
 4. If the phrase is **positive**:
-   - A candy is automatically **dispensed**
-5. Otherwise, a message is shown asking the user to try again.
 
+![Cookies](./assets/cookies.gif)
+   - A candy is automatically **dispensed**
+5. Otherwise, a image is shown asking the user to try again.
+![No cookie for you](./assets/noCookie.png)
 
 ---
 
