@@ -21,7 +21,7 @@ We use parallel tasks (xTaskCreatePinnedToCore) to separate the application's lo
     Some tasks use flags (e.g., recordingVisualShouldStop) to exit gracefully and keep transitions visually coherent.
 ```
 
-### ⚙️ Performance on XIAO ESP32-S3
+### ⚙️ Performance on XIAO ESP32S3 Sense
 
 Despite its tiny form factor, the XIAO ESP32S3 Sense handles everything — from Wi-Fi connectivity and I2S audio capture to real-time sprite rendering on Round display for Xiao — all thanks to the multitasking provided by FreeRTOS.
 
@@ -61,7 +61,7 @@ Set these under **Tools**:
 ![Options](./assets/arduino_options.jpg)
 
 ## ⚠️ Warning
-You can't change much regarding Xiao Pins. Some are used by the Sense, byt the Round Display, I2C, etc.
+You can't change much regarding the Xiao Pins. Some are used by the Sense, others by the Round Display, I2C, etc.
 There aren't many available. 
 
 You can read more about it on Seeedstudio Wiki

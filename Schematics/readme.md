@@ -4,6 +4,7 @@ Here are the schematics for the Candy Machine electronics component.
 
 You'll need:
 - Seeedstudio ESP32S3 Sense (you must remove the camera)
+
 ![Options](esp32s3_sense.jpg)
 
 - Seeedstudio Round display for Xiao
