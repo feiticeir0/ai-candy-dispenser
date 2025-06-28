@@ -1,4 +1,4 @@
-## :electric_plug: Multitasking with FreeRTOS on the ESP32-S3
+## :electric_plug: Multitasking with FreeRTOS on the Xiao ESP323 Sense
 
 We use the power of the ESP32-S3's dual-core architecture and the built-in FreeRTOS real-time operating system to run multiple tasks simultaneously.
 
