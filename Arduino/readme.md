@@ -7,24 +7,17 @@ We use parallel tasks (xTaskCreatePinnedToCore) to separate the application's lo
 ### :dart: Main tasks:
 ```
     standbyTask: breathing animation while waiting for touch interaction.
-
     gravacaoTask: audio recording using the PDM microphone.
-
     sendTask: HTTP POST to the API and spinning loader animation.
-
     recordingVisualTask: animated ripple effect during recording.
-
     cookieTask: cookie animation + motor control to dispense the treat.
-
     noCookieTask: visual feedback when no cookie is dispensed.
 ```
 
 ### 🧩 Task coordination:
 ```
     We define clear application states (AppState) to represent each phase of operation.
-
     A binary semaphore (semState) is used to signal and switch between tasks safely.
-
     Some tasks use flags (e.g., recordingVisualShouldStop) to exit gracefully and keep transitions visually coherent.
 ```
 
