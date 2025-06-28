@@ -16,7 +16,7 @@ We use parallel tasks (xTaskCreatePinnedToCore) to separate the application's lo
 
 ### 🧩 Task coordination:
 ```
-    We define clear application states (AppState) to represent each phase of operation.
+    Clear application states are defined to represent each phase of operation.
     A binary semaphore (semState) is used to signal and switch between tasks safely.
     Some tasks use flags (e.g., recordingVisualShouldStop) to exit gracefully and keep transitions visually coherent.
 ```
