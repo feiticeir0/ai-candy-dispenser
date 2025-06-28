@@ -23,7 +23,7 @@ We use parallel tasks (xTaskCreatePinnedToCore) to separate the application's lo
 
 ### ⚙️ Performance on XIAO ESP32-S3
 
-Despite its tiny form factor, the XIAO ESP32-S3 handles everything — from Wi-Fi connectivity and I2S audio capture to real-time sprite rendering on the TFT display — all thanks to the robust multitasking provided by FreeRTOS.
+Despite its tiny form factor, the XIAO ESP32S3 Sense handles everything — from Wi-Fi connectivity and I2S audio capture to real-time sprite rendering on Round display for Xiao — all thanks to the multitasking provided by FreeRTOS.
 
 ### Uploading Code to the Seeed Studio Xiao ESP32S3 Sense
 
