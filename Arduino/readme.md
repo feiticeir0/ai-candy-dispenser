@@ -1,8 +1,8 @@
 ## :electric_plug: Multitasking with FreeRTOS on the ESP32-S3
 
-This project leverages the power of the ESP32-S3's dual-core architecture and the built-in FreeRTOS real-time operating system to run multiple tasks simultaneously with great efficiency.
+We use the power of the ESP32-S3's dual-core architecture and the built-in FreeRTOS real-time operating system to run multiple tasks simultaneously.
 
-We use parallel tasks (xTaskCreatePinnedToCore) to separate the application's logic into well-defined states. This ensures smooth visual animations, real-time audio processing, and fast interaction response, even under constrained hardware.
+We use parallel tasks (xTaskCreatePinnedToCore) to separate the application's logic into well-defined states.
 
 ### :dart: Main tasks:
 ```
@@ -52,8 +52,11 @@ To run the Candy Machine on the Xiao ESP32S3 Sense, with microphone and the LCD 
 - `CHSC6X_Touch.h` **( Xiao Round Display Touch screen)**
 - `cookie.h`       **(cookie image)**
 - `no_cookies.h`   **(no cookie image)**
-
 ---
+
+
+Under  [files](./files) directory you'll find all the needed files for the client. 
+
 
 ### ⚙️ Required Settings in Arduino IDE
 
