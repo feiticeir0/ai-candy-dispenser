@@ -195,11 +195,11 @@ Now, Candy Machine will start automatically when the system starts.
 ### 3D Files
 Go to the [3D](./3D/readme.md) folder for more information.
 
+### Schematics
+Go to the [Schematics](./Schematics/readme.md) folder for more information on how to wire the project. 
+
 ### Arduino Code
 Go to the [Arduino](./Arduino/readme.md) folder for more information.
-
-### Schematics
-Go to the [Schematics](./Schematics/readme.md) folder for more information on how to wire the Xiao to the motor controller. 
 
 ## 🔧 TODO
 - [ ] 🎯 Add a sensor to detect motor rotation (make sure a candy exits)
