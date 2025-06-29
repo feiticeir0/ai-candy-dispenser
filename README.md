@@ -189,7 +189,7 @@ Start it manually the first time.
 ```bash
 sudo systemctl start candy-machine.service
 ```
-Now, Candy Machine will start automatically when the system starts. 
+Now, the Candy Machine will start automatically when the system starts. 
 
 ## Client (the candy dispenser)
 ### 3D Files
@@ -202,7 +202,7 @@ Go to the [Schematics](./Schematics/readme.md) folder for more information on ho
 Go to the [Arduino](./Arduino/readme.md) folder for more information.
 
 ## 🔧 TODO
-- [ ] 🎯 Add a sensor to detect motor rotation (make sure a candy exits)
+- [ ] :bulb: Add a sensor to detect motor rotation (make sure a candy exits)
 - [ ] 🧠 Migrate the FastAPI server to work with a Raspbery PI AI Hat+ 
 
 
