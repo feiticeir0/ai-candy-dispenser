@@ -150,6 +150,48 @@ These are the models used. You can change them in `main.py`.
 
 Instead of something about candy, it can be about anything. The Xiao records a 5 seconds phrase (customizable, but be aware of memory limitations - it's recorded on memory) and sends it to the server for transcription by whisper. There, you can **change** the classification labels and make it about anything. 
 
+## 🔧 Auto-start on Boot (systemd)
+For the docker image to start at boot, we need to create a Systemd file. 
+Let's create the file
+```bash
+sudo vi /etc/systemd/system/candy-machine.service
+```
+Inside, place the following lines. **Here I'm using the docker compose GPU file**.
+
+Don't forget to replace the location for your working directory, where the docker compose files are located. 
+
+```
+[Unit]
+Description=Candy Machine API (Docker Compose)
+Requires=docker.service
+After=docker.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+WorkingDirectory=/path/for/the/project
+ExecStart=/usr/bin/docker compose -f docker-compose.cpu.yml up -d
+ExecStop=/usr/bin/docker compose -f docker-compose.cpu.yml down
+TimeoutStartSec=0
+
+[Install]
+WantedBy=multi-user.target
+
+```
+Reload Systemd and enable the new service.
+
+```bash
+sudo systemctl daemon-reexec
+sudo systemctl daemon-reload
+sudo systemctl enable candy-machine.service
+```
+
+Start it manually the first time.
+```bash
+sudo systemctl start candy-machine.service
+```
+Now, Candy Machine will start automatically when the system starts. 
+
 ## Client (the candy dispenser)
 ### 3D Files
 Go to the [3D](./3D/readme.md) folder for more information.
