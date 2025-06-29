@@ -176,7 +176,6 @@ TimeoutStartSec=0
 
 [Install]
 WantedBy=multi-user.target
-
 ```
 Reload Systemd and enable the new service.
 
