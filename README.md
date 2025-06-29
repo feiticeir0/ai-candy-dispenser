@@ -1,4 +1,6 @@
 # Candy Machine with Voice Recognition
+![Candy Machine](./assets/Candy_Dispenser_.jpg)
+
 This project is a tiny, AI-powered candy dispenser built with the Seeed Studio ESP32S3 Sense and the Xiao Round Display for XIAO.
 
 Say the right magic words, and you’ll be rewarded with a cookie. 😄
