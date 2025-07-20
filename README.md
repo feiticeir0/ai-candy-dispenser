@@ -1,7 +1,8 @@
 # Candy Machine with Voice Recognition
 <div style="text-align: center;">
-    <img src="./assets/Candy_Dispenser_.jpg">
+    <img src="./assets/candyDispenser_title.png">
 </div>
+
 
 This project is a tiny, AI-powered candy dispenser built with the Seeed Studio ESP32S3 Sense and the Xiao Round Display for XIAO.
 
@@ -207,7 +208,11 @@ Go to the [Arduino](./Arduino/readme.md) folder for more information.
 
 ## 🔧 TODO
 - [ ] :bulb: Add a sensor to detect motor rotation (make sure a candy exits)
-- [ ] 🧠 Migrate the FastAPI server to work with a Raspbery PI AI Hat+ 
+- [ ] :bulb: Migrate the FastAPI server to work with a Raspbery PI AI Hat+ 
+- [ ] :bulb: Check for network connection in the Xiao
+
+# Result
+[![Here's a video of the project running](https://www.youtube.com/vi/d_zhMSL0ufM/0.jpg)](https://www.youtube.com/watch?v=d_zhMSL0ufM)
 
 
 ## License
