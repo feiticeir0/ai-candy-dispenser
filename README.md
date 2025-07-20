@@ -212,7 +212,7 @@ Go to the [Arduino](./Arduino/readme.md) folder for more information.
 - [ ] :bulb: Check for network connection in the Xiao
 
 # Result
-[![Here's a video of the project running](https://www.youtube.com/vi/d_zhMSL0ufM/0.jpg)](https://www.youtube.com/watch?v=d_zhMSL0ufM)
+[![Here's a video of the project running](https://img.youtube.com/vi/d_zhMSL0ufM/0.jpg)](https://www.youtube.com/watch?v=d_zhMSL0ufM)
 
 
 ## License
