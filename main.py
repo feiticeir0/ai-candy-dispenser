@@ -37,7 +37,7 @@ classifier = pipeline("zero-shot-classification", model="facebook/bart-large-mnl
 
 @app.post("/analyze-audio")
 async def analyze_raw_audio(request: Request):
-     """
+    """
     Endpoint para receber um ficheiro de áudio via POST,
     transcrever o conteúdo usando Whisper, e classificar o texto
     como 'positivo' ou 'negativo' com base em zero-shot classification.
