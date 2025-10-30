@@ -38,7 +38,7 @@ To run the Candy Machine on the Xiao ESP32S3 Sense, with microphone and the LCD 
 ### Libraries
 - `TFT_eSPI`
 - `ArduinoJSON`
-- `PNGdec`
+- `PNGdec` (version 1.0.2 or lower)
 - `Wire`
 
 #### Custom libraries (included in the repository)

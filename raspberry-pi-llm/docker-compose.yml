@@ -1,0 +1,7 @@
+services:
+  llm-server:
+    build: ./server
+    container_name: candy-server
+    restart: unless-stopped
+    ports:
+      - "5000:5000"
