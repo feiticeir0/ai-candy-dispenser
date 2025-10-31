@@ -36,7 +36,7 @@ To run the Candy Machine on the Xiao ESP32S3 Sense, with microphone and the LCD 
 - Official `ESP32` library (v2.0.7 or higher recommended)
 
 ### Libraries
-- `TFT_eSPI`
+- `TFT_eSPI` - It must be from SeeedStudio - https://github.com/Seeed-Projects/SeeedStudio_TFT_eSPI
 - `ArduinoJSON`
 - `PNGdec` (version 1.0.2 or lower)
 - `Wire`
