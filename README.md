@@ -196,6 +196,42 @@ sudo systemctl start candy-machine.service
 ```
 Now, the Candy Machine will start automatically when the system starts. 
 
+## ⚙️ Technical Notes & Troubleshooting
+### 🧩 Display not showing graphics (white or black screen)
+
+If the round display remains white or black while touch and Wi-Fi work, make sure you’re using the SeeedStudio TFT_eSPI library (not the official Bodmer version).
+
+You can install it directly from Seeed’s GitHub:
+
+https://github.com/Seeed-Studio/Seeed_Arduino_TFT_eSPI
+
+### TFT_eSPI
+
+Also verify that you’ve removed any conflicting versions of TFT_eSPI from your Arduino libraries folder before compiling.
+
+#### ✅ Tested combination:
+* Seeed_Arduino_TFT_eSPI (latest)
+* PNGdec version 1.0.2 (older, keeps void callback compatibility)
+
+### 🎧 Whisper and ffmpeg error on Jetson devices
+When running the FastAPI server with systemd and a Python virtual environment, Whisper may fail with:
+```bash
+FileNotFoundError: [Errno 2] No such file or directory: 'ffmpeg'
+```
+
+This happens because systemd launches services with a minimal PATH that doesn’t include /usr/bin.
+To fix this, the following lines are at the very beginning of main.py:
+```python
+# Whisper & ffmpeg fix for Jetson + systemd
+import os
+os.environ["PATH"] += os.pathsep + "/usr/bin:/usr/local/bin"
+```
+This ensures ffmpeg is always found, even when the server is started automatically at boot.
+- Tested on Jetson Orin NX (JetPack 6.0)
+- Environment: Python 3.10 virtualenv + systemd service
+
+
+
 ## Client (the candy dispenser)
 ### 3D Files
 Go to the [3D](./3D/readme.md) folder for more information.

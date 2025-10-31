@@ -14,6 +14,10 @@
 # Deverás ter recebido uma cópia da Licença Pública Geral GNU
 # juntamente com este programa. Se não, veja <https://www.gnu.org/licenses/>.
 
+# Whisper & ffmpeg fix for Jetson + systemd
+import os
+os.environ["PATH"] += os.pathsep + "/usr/bin:/usr/local/bin"
+
 from fastapi import FastAPI, UploadFile, File, Request
 from fastapi.responses import JSONResponse
 import whisper
