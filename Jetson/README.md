@@ -1,5 +1,5 @@
 ## 🍬 Jetson Deployment Guide
-Overview
+### Overview
 
 This document explains how to deploy the Candy Dispenser API on a Jetson Orin NX (or any Jetson device running JetPack 6+).
 It covers creating a Python virtual environment, installing dependencies, configuring systemd for automatic startup, and solving common issues with ffmpeg and Whisper.
@@ -25,7 +25,7 @@ Upgrade pip and install dependencies:
 
 ```bash
 pip install --upgrade pip
-pip install fastapi uvicorn[standard] openai-whisper pydub
+pip install fastapi uvicorn[standard] pydub
 ```
 ### Jetson Specific Pytorch packages
 To install a supported Pytorch version, head up to Nvidia forums and follow the instructions according to your JetPack version.
@@ -54,7 +54,7 @@ import os
 os.environ["PATH"] += os.pathsep + "/usr/bin:/usr/local/bin"
 ```
 ## 🔧 4. Create the systemd service
-Create a new file:
+Create the new files, changing <your_user> for your user:
 ```bash
 sudo nano /etc/systemd/system/candy-api.service
 ```
