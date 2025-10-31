@@ -46,6 +46,8 @@ Project Structure
 .
 ├── 3D/                       # Directory for the 3D models
 ├── Arduino/                  # Directory for the Arduino code
+├── Jetson/                   # Directory for Jetson specific instructions
+├── raspberry-pi-llm/         # Directory for running the server using a Raspberry PI
 ├── main.py                   # API code
 ├── Dockerfile                # Dockerfile for CPU
 ├── Dockerfile.gpu            # Dockerfile with CUDA support (GPU)
@@ -230,7 +232,8 @@ This ensures ffmpeg is always found, even when the server is started automatical
 - Tested on Jetson Orin NX (JetPack 6.0)
 - Environment: Python 3.10 virtualenv + systemd service
 
-
+### Deployment with Jetson
+If you're going to use a Nvidia Jetson (tested with Seeedstudio reComputer J4012 - Jetson Orin NX 16GB), go to [Jetson](./Jetson/README.md) folder for more information
 
 ## Client (the candy dispenser)
 ### 3D Files
