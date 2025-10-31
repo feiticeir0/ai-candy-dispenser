@@ -139,6 +139,10 @@ docker exec -it candy-api-gpu python3 -c "import torch; print(torch.cuda.is_avai
 ```
 ---
 
+## Deployment with Jetson
+If you're going to use a Nvidia Jetson (tested with Seeedstudio reComputer J4012 - Jetson Orin NX 16GB), go to [Jetson](./Jetson/README.md) folder for more information
+---
+
 ## 📦 Models Used
 These are the models used. You can change them in `main.py`.
 
@@ -232,8 +236,6 @@ This ensures ffmpeg is always found, even when the server is started automatical
 - Tested on Jetson Orin NX (JetPack 6.0)
 - Environment: Python 3.10 virtualenv + systemd service
 
-### Deployment with Jetson
-If you're going to use a Nvidia Jetson (tested with Seeedstudio reComputer J4012 - Jetson Orin NX 16GB), go to [Jetson](./Jetson/README.md) folder for more information
 
 ## Client (the candy dispenser)
 ### 3D Files
